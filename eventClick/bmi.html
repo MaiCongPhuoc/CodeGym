@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let height = prompt('nhập chiều cao m:');
+    let weight = prompt('nhập cân nặng kg:');
+    let bmi = parseFloat(weight) / parseFloat((height) * parseFloat(height));
+    console.log(bmi)
+    switch (true) {
+        case (bmi < 18.5):
+            alert('om');
+            break;
+        case (bmi >= 18.5 && bmi < 25):
+            alert('binh thuong')
+            break;
+        case (bmi >= 25 && bmi < 30):
+            alert('Thua can')
+            break;
+        default :
+            alert('beo phi')
+    }
+</script>
+
+</html>
