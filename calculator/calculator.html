@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .screen {
+            width: 435px;
+            height: 35px;
+        }
+
+        .calculation {
+            width: 60px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <thead>
+                <input type="text" value="0" class="screen" id="seen">
+            </thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="button" value="!x" class="calculation" id="factorial" onclick="enter()"></td>
+                <td><input type="button" value="(" class="calculation" id="OpenParenthesis" onclick="enter(this)"></td>
+                <td><input type="button" value=")" class="calculation" id="CloseParenthesis" onclick="enter(this)"></td>
+                <td><input type="button" value="%" class="calculation" id="percent" onclick="enter()"></td>
+                <td><button type="reset" class="calculation" reset>AC</button></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="lnv" class="calculation" id="lnv" onclick="enter()"></td>
+                <td><input type="button" value="sin" class="calculation" id="sin" onclick="enter()"></td>
+                <td><input type="button" value="ln" class="calculation" id="ln" onclick="enter()"></td>
+                <td><input type="button" value="7" class="calculation" id="seven" onclick="enter(this)"></td>
+                <td><input type="button" value="8" class="calculation" id="eight" onclick="enter(this)"></td>
+                <td><input type="button" value="9" class="calculation" id="nine" onclick="enter(this)"></td>
+                <td><input type="button" value="/" class="calculation" id="division" onclick="enter(this)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Pi" class="calculation" id="pi" onclick="enter()"></td>
+                <td><input type="button" value="cos" class="calculation" id="cos" onclick="enter()"></td>
+                <td><input type="button" value="log" class="calculation" id="log" onclick="enter()"></td>
+                <td><input type="button" value="4" class="calculation" id="four" onclick="enter(this)"></td>
+                <td><input type="button" value="5" class="calculation" id="five" onclick="enter(this)"></td>
+                <td><input type="button" value="6" class="calculation" id="six" onclick="enter(this)"></td>
+                <td><input type="button" value="*" class="calculation" id="multiply" onclick="enter(this)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="e" class="calculation" id="e" onclick="enter()"></td>
+                <td><input type="button" value="tan" class="calculation" id="tan" onclick="enter()"></td>
+                <td><input type="button" value="sqrt" class="calculation" id="sqr" onclick="enter(this)"></td>
+                <td><input type="button" value="1" class="calculation" id="one" onclick="enter(this)"></td>
+                <td><input type="button" value="2" class="calculation" id="two" onclick="enter(this)"></td>
+                <td><input type="button" value="3" class="calculation" id="three" onclick="enter(this)"></td>
+                <td><input type="button" value="-" class="calculation" id="minus" onclick="enter(this)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Ans" class="calculation" id="ans" onclick="enter()"></td>
+                <td><input type="button" value="EXP" class="calculation" id="exp" onclick="enter()"></td>
+                <td><input type="button" value="X^" class="calculation" id="exponential" onclick="enter()"></td>
+                <td><input type="button" value="0" class="calculation" id="zero" onclick="enter(this)"></td>
+                <td><input type="button" value="." class="calculation" id="dot" onclick="enter(this)"></td>
+                <td><input type="button" value="=" class="calculation" id="equal" onclick="result(this)"></td>
+                <td><input type="button" value="+" class="calculation" id="plus" onclick="enter(this)"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    let dauVaoOne;
+    let dauVaoTwo;
+    let calcula;
+    function enter(element) {
+        // document.getElementById('seen').value = element.value;
+        if (document.getElementById('seen').value == "0") {
+            document.getElementById('seen').value = '';
+            document.getElementById('seen').value = element.value;
+        } else {
+            document.getElementById('seen').value += element.value;
+        }
+        dauVaoOne = document.getElementById('seen').value;
+    }
+    function operator(opera) {
+        document.getElementById('seen').value = '';
+        document.getElementById('seen').value = opera.value;
+        calcula = document.getElementById('seen').value;
+        document.getElementById('seen').value = '';
+        console.log(calcula);
+    }
+    function result(resul) {
+        document.getElementById('seen').value = eval(dauVaoOne + calcula + dauVaoTwo);
+    }
+</script>
+
+</html>

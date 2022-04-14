@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // let message;
+    // switch (spore < 5, spore < 7, spore < 8, spore < 9, spore <= 10) {
+    //     case spore < 5:
+    //         message = 'yeu'
+    //         break;
+    //     case spore <= 6.99:
+    //         message = 'Trung Binh'
+    //         break;
+    //     case spore <= 7.99:
+    //         message = 'Kha'
+    //         break;
+    //     case spore <= 8.99:
+    //         message = 'Gioi'
+    //         break;
+    //     case spore <= 10:
+    //         message = 'Xuat sac'
+    //         break;
+    //     default:
+    //         message = 'truong hop khong hop le.'
+    // }
+    // console.log(message)
+
+    let point = parseFloat(prompt('nhap diem so:'));
+    console.log(point > 10 || point < 0 ? 'ĐTB khong hopwk lệ' :
+        point >= 9 ? 'xuatsac' :
+            point >= 8 ? 'Gioi' :
+                point >= 7 ? 'Kha' :
+                    point >= 5 ? 'TrungBinh' : 'Yeu');
+</script>
+
+</html>
