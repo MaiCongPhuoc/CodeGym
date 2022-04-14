@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            /* position: relative; */
+            width: 330px;
+            height: 300px;
+        }
+        #show{
+            width: 250px;
+            height: 20px;
+        }
+        input{
+            width: 60px;
+            height: 40px;
+        }
+        button{
+            width: 60px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div id="content_show">
+            <input type="text" id="show">
+        </div>
+        <div id="content_enter">
+            <form action="">
+                <table>
+                    <tr>
+                        <td><input id="opera" type="button" value="1" onclick="enter(this)"></td>
+                        <td><input id="opera" type="button" value="2" onclick="enter(this)"></td>
+                        <td><input id="opera" type="button" value="3" onclick="enter(this)"></td>
+                        <td><input id="opera" type="button" value="+" onclick="enter(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><input id="opera" type="button" value="4" onclick="enter(this)"></td>
+                        <td><input id="opera" type="button" value="5" onclick="enter(this)"></td>
+                        <td><input id="opera" type="button" value="6" onclick="enter(this)"></td>
+                        <td><input id="opera" type="button" value="-" onclick="enter(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><input id="opera" type="button" value="7" onclick="enter(this)"></td>
+                        <td><input id="opera" type="button" value="8" onclick="enter(this)"></td>
+                        <td><input id="opera" type="button" value="9" onclick="enter(this)"></td>
+                        <td><input id="opera" type="button" value="*" onclick="enter(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><button type="reset" reset>C</button></td>
+                        <td><input id="opera" type="button" value="0" onclick="enter(this)"></td>
+                        <td><input id="opera" type="button" value="=" onclick="result(this)"></td>
+                        <td><input id="opera" type="button" value="/" onclick="enter(this)"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function enter(element){
+        document.getElementById('show').value += element.value
+    }
+    function result(resul){
+    //    resul = document.getElementById('show').value;
+        resul = eval(document.getElementById('show').value);
+        document.getElementById('show').value = resul;
+    }
+</script>
+
+</html>
