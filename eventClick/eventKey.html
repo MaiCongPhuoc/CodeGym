@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: cadetblue;
+        }
+
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: aquamarine;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="nobita" src="img/nobita.jpg" style="position:absolute;left:0; top:0px;" height="150" width="120" />
+</body>
+<script>
+    var moveLeft = 37;
+    var moveTop = 38;
+    var moveRight = 39;
+    var moveUp = 40;
+
+    let element = document.getElementById('nobita');
+
+    function upArrow() {
+        if (parseInt(element.style.top) < 200) {
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+            console.log(element.style.top + " " + 'dung')
+        }
+    }
+    function downArrow() {
+        // element.style.top = parseInt(element.style.top) + 5 + 'px';
+        if (parseInt(element.style.top) < 200) {
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+            // parseInt(element.style.top) = parse(element.style.top);
+            console.log(element.style.top + " " + 'dung')
+        }
+    }
+    function leftArrow() {
+        if (parseInt(element.style.left) < 501) {
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+        }
+    }
+    function rightArrow() {
+        if (parseInt(element.style.left) < 500) {
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+        }
+    }
+    // document.getElementById('parent').style.position
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case moveLeft:
+                leftArrow();
+                break;
+            case moveRight:
+                rightArrow();
+                break;
+            case moveTop:
+                upArrow();
+                break;
+            case moveUp:
+                downArrow();
+                break;
+        }
+    }
+    function docready() {
+        document.addEventListener('keydown', moveSelection);
+    }
+    window.onload = docready();
+</script>
+
+</html>
