@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Bài 1: Chuyển từ độ C sang độ F.</p>
+    <input type="text" id="doC" placeholder="Nhập độ C">
+    <input type="button" onclick="convertF()" value="kết quả">
+
+    <p>Bài 2: Chuyển từ mét sang feet:</p>
+    <input type="text" placeholder="chuyển M sang feet">
+    <input type="button" onclick="ConvertFeet()" value="convert">
+
+    <p>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</p>
+    <input type="text" id="a" placeholder="nhập cạnh a">
+    <input type="button" onclick="DienTichHinhVuong()" value="DIện tích">
+
+    <p>Bài 4: Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</p>
+    <input type="text" id="ca" placeholder="nhập cạnh a">
+    <input type="text" id="b" placeholder="nhập cạnh b">
+    <input type="text" id="DienTich" placeholder="Diện Tích Hình Chữ Nhật là">
+    <input type="button" onclick="DienTichCN()" value="DIện tích">
+
+    <p>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</p>
+    <input type="text" id="canhA" placeholder="nhập cạnh a">
+    <input type="text" id="canhB" placeholder="nhập cạnh b">
+    <input type="text" id="DienTichtg" placeholder="Diện Tích Hình Tam Giác Vuông là">
+    <input type="button" onclick="DienTichTG()" value="DIện tích">
+
+    <p>Bài 6: Giải phương trình bậc 1.</p>
+    <input type="text" id="A" placeholder="nhập a">
+    <input type="text" id="B" placeholder="nhập b">
+    <input type="text" id="KetQua" placeholder="Diện Tích Hình Tam Giác Vuông là">
+    <input type="button" onclick="KetQuaPTB1()" value="DIện tích">
+
+    <p>Bài 7: Giải phương trình bậc 2.</p>
+    <input type="text" id="numberA" placeholder="nhập a">
+    <input type="text" id="numberB" placeholder="nhập b">
+    <input type="text" id="numberC" placeholder="nhập c">
+    <input type="text" id="KetQuaB2" placeholder="Kết quả">
+    <input type="button" onclick="KetQuaPTB2()" value="tính">
+
+    <p>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.
+        Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</p>
+    <input type="text" id="NumberAge" placeholder="nhập số tuổi">
+    <input type="button" onclick="age()" value="kiểm tra">
+    
+    <input type="text" style="width: 200px;" id="showAge">
+    <p>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của
+    một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</p>
+    <input type="text" id="CANHA" placeholder="nhập a">
+    <input type="text" id="CANHB" placeholder="nhập b">
+    <input type="text" id="CANHC" placeholder="nhập c">
+    <input type="text" id="choBiet" placeholder="Kết quả">
+    
+    <input type="button" onclick="ChoBietTamGIac()" value="kiểm tra">
+    <p>Bài 10: Viết chương trình tính giá điện.</p>
+    <input type="text" id="SoCHu" placeholder="nhập số kWh bạn đã dùng">
+    <input type="text" id="BaoGiaDien" placeholder="Kết quả">
+    
+    <input type="button" onclick="TienDien()" value="kiểm tra">
+    <p>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</p>
+    <input type="text" id="TienLuong" placeholder="0 VND">
+    <input type="text" id="BaoThue" placeholder="Kết quả">
+    <input type="button" onclick="TienThue()" value="kiểm tra">
+    
+    <p>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con)
+        khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</p>
+        <input type="text" id="TienGui" placeholder="nhập số tiền gữi:">
+        <p>lãi suất là: 7%/năm</p>
+        <input type="text" id="SoNam" placeholder="nhập số năm đã gữi:">
+        <input type="text" id="TinhLai" placeholder="Kết quả">
+        <input type="button" onclick="LaiSuat()" value="kiểm tra">
+    
+</body>
+<script>
+    function convertF() {
+        let C = Number(document.getElementById('doC').value)
+        let result = C * 33.8
+        document.getElementById('doC').value = result
+    }
+    function ConvertFeet() {
+        let fet = Number(document.getElementById('feet').value)
+        let convertFet = fet * 3.2808
+        document.getElementById('feet').value = convertFet
+    }
+    function DienTichHinhVuong() {
+        let a = Number(document.getElementById('a').value)
+        let convertFet = a * a
+        document.getElementById('a').value = convertFet
+    }
+    function DienTichCN() {
+        let a = Number(document.getElementById('ca').value)
+        let b = Number(document.getElementById('b').value)
+        let convert = a * b
+        document.getElementById('DienTich').value = convert
+    }
+    function DienTichTG() {
+        let a = Number(document.getElementById('canhA').value)
+        let b = Number(document.getElementById('canhB').value)
+        let convert = ((a * b) / 2)
+        document.getElementById('DienTichtg').value = convert
+    }
+    function KetQuaPTB1() {
+        let a = Number(document.getElementById('A').value)
+        let b = Number(document.getElementById('B').value)
+        let convert = -b / a
+        document.getElementById('KetQua').value = convert
+    }
+    function KetQuaPTB2() {
+        debugger;
+        let delta = (b * b) - (4 * (a * c));
+        if (a == 0) {
+            document.getElementById('KetQuaB2').value = 'Phương trình này là bậc nhất'
+        } else if (delta < 0) {
+            document.getElementById('KetQuaB2').value = 'phương trình vô nghiệm'
+        } else if (delta == 0) {
+            document.getElementById('KetQuaB2').value = `phuong trinh có nghiệm kép: ${-b / (2 * a)}`
+        } else
+        document.getElementById('KetQuaB2').value = `x1: ${(-b - Math.sqrt(delta) / (2 * a))} x2: ${(-b + Math.sqrt(delta) / (2 * a))}`
+    }
+    function age() {
+        let so = 2
+        let age = parseInt(document.getElementById('NumberAge').value)
+        if (age !== so) {
+            document.getElementById('showAge').value = 'vui lòng nhập số nguyên'
+        } else if (age > 0 && age <= 120) {
+            document.getElementById('showAge').value = 'là tuổi của một người'
+        } else {
+            document.getElementById('showAge').value = 'đây là sinh vật ngoài hành tinh'
+        }
+    }
+    function ChoBietTamGIac(){
+        let a = Number(document.getElementById('CANHA').value);
+        let b = Number(document.getElementById('CANHB').value);
+        let c = Number(document.getElementById('CANHC').value);
+        if (a == 0 && b == 0 && c == 0) {
+            alert('đây không phải là tam giac')
+        } else if (a + b > c || b + c > a || a + c > b) {
+            document.getElementById('choBiet').value = 'đây là một tam giác'
+        }
+    }
+    function TienDien(){
+        let b = Number(document.getElementById('SoCHu').value);
+        let GiaDien
+        if (b >= 0 & b <= 50) {
+            GiaDien = b * 1.678
+            document.getElementById('BaoGiaDien').value = GiaDien + ' ' + 'VND'            
+        } else if (b >= 51 & b <= 100) {
+            GiaDien = b * 1.734
+            document.getElementById('BaoGiaDien').value = GiaDien + ' ' + 'VND'            
+        } else if (b >= 0 & b <= 50) {
+            GiaDien = b * 2.014
+            document.getElementById('BaoGiaDien').value = GiaDien + ' ' + 'VND'            
+        } else {
+            GiaDien = b * 2.536
+            document.getElementById('BaoGiaDien').value = GiaDien + ' ' + 'VND'   
+        }         
+    }
+    function TienThue(){
+        let b = Number(document.getElementById('SoCHu').value);
+        let GiaThue
+        if (b <= 5000000) {
+            GiaThue = b * 0.05
+            document.getElementById('BaoGiaDien').value = GiaThue + ' ' + 'VND'            
+        } else if (b >= 5000000 & b <= 10000000) {
+            GiaThue = (b * 0.1) - (1000000 * 0.25)
+            document.getElementById('BaoGiaDien').value = GiaThue + ' ' + 'VND'            
+        } else if (b >= 10000000 & b <= 18000000) {
+            GiaThue = (b * 0.1) - (1000000 * 0.75)
+            document.getElementById('BaoGiaDien').value = GiaThue + ' ' + 'VND'            
+        }  else if (b >= 18000000 & b <= 32000000) {
+            GiaThue = (b * 0.2) - (1000000 * 1.65)
+            document.getElementById('BaoGiaDien').value = GiaThue + ' ' + 'VND'            
+        } else if (b >= 32000000 & b <= 52000000) {
+            GiaThue = (b * 0.25) - (1000000 * 3.25)
+            document.getElementById('BaoGiaDien').value = GiaThue + ' ' + 'VND'            
+        }  else if (b >= 52000000 & b <= 80000000) {
+            GiaThue = (b * 0.3) - (1000000 * 5.85)
+            document.getElementById('BaoGiaDien').value = GiaThue + ' ' + 'VND'            
+        } else {
+            GiaThue = (b * 0.35) - (1000000 * 9.85)
+            document.getElementById('BaoGiaDien').value = GiaThue + ' ' + 'VND'   
+        }         
+    }
+    function LaiSuat() {
+        let PV = Number(document.getElementById('TienGui').value);
+        let n = Number(document.getElementById('SoNam').value);
+        let FV = PV * (1 + 0.07) ** n
+        document.getElementById('TinhLai').value = FV
+    }
+</script>
+
+</html>
