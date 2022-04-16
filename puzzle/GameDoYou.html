@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        div{
+            position: relative;
+            width: 400px;
+            height: 100px;
+            top: 205px;
+            left: 220px;
+        }
+        /* h1, input{
+            position: absolute;
+        } */
+        input{
+            position: absolute;
+            top: 70px;
+            text-align: center;
+            min-width: 50px;
+            min-height: 30px;
+        }
+        #input1{
+            left: 100px;
+        }
+        #input2{
+            left: 180px;
+        }
+    </style>
+<body>
+    <div>
+        <h1>MI THÍCH TAU KHÔNG?</h1>
+        <input type="button" value="YES" id="input1">
+        <input type="button" value="NO" id="input2" onmouseover="MouseOver()">
+    </div>
+</body>
+<script>
+    let btn_yes = document.getElementById('input1').addEventListener('click', function (){
+        alert('oke vậy chúng ta yêu nhau:')
+    })
+
+    function MouseOver() {
+        let widthm = document.getElementById('input2')
+        widthm.style.left = Math.floor(Math.random() * 1250) + 1 + 'px';
+        widthm.style.top = Math.floor(Math.random() * 450) + 'px';
+    }
+</script>
+</html>
