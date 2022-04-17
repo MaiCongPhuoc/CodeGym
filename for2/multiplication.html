@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let rows;
+    let i;
+    let j;
+    rows = "<table border='1' width='1000' cellspacing='0' cellpadding='3'>";
+        console.log(rows)
+    for (i = 2; i <= 9; i++){
+        rows += "<tr>";
+        for (j = 1; j <= 9; j++){
+            rows += '<td>' + i + 'x' + j + 
+        '=' + eval(i * j) + '</td>';
+        }
+        rows += "</tr>";
+    }
+    rows += '</table>';
+    document.write(rows);
+</script>
+</html>
