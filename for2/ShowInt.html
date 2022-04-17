@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<!-- <script>
+    debugger;
+    // let num = parseInt(prompt('nhập số lượng số nguyên tố: '));
+    let numbers = 5;
+    let count = 0;
+    let n = 2;
+    let i = 3;
+    let Plus = 20;
+    flag = true;
+    for (i; i < Plus; i += 2) {
+        if ((Plus - 1) % i == 0) {
+            flag = false
+            break
+        } else {
+            flag = true
+            for (n; n < i; n++) {
+                if (i % n == 0 && n % 2 == 0) {
+                    flag = false
+                    // i la so nguyen to
+                    break
+                } else {
+                    flag = true
+                    document.write(i + ' ')
+                    // i khong phải la so nguyen to
+                }
+            }
+        }
+    }
+    // if(flag) {
+    //     document.write('i là so nguyen to')
+    // } else {
+    //     document.write(' i khong lai la so nguyen to')
+    // }
+</script> -->
+<script>
+    function checkSNT(n) {
+        if (n >= 2) {
+            for (i = 2; i < n; i++) {
+                if (n % i == 0)
+                    return false;
+                else
+                    return true;
+            }
+        }
+    }
+    let num = parseInt(prompt('Nhập số lượng số nguyên tố đầu tiên muốn in ra: '));
+    let count = 0;
+    let n = 2;
+    while (count < num) {
+        if (checkSNT(n)) {
+            document.write(n + ' ');
+            count++;
+        }
+        n++;
+    }
+</script>
+
+</html>
