@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</p>
+    <input type="text" id="a" placeholder="nhập a">
+    <input type="text" id="b" placeholder="nhập b">
+    <input type="text" id="kq" placeholder="kết quả">
+    <input type="button" onclick="test()" value="kết quả">
+    
+    <p>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</p>
+    <input type="text" id="age" placeholder="nhập tuổi của bạn">
+    <input type="text" id="kQ" placeholder="kết quả" style="width:400px">
+    <input type="button" onclick="result()" value="kết quả">
+    
+    <p>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</p>
+    <input type="text" id="NumRamdon" placeholder="nhập số bất kì">
+    <p id="KQ">kết quả là:</p>
+    <input type="button" onclick="NumberRamdom()" value="kết quả">
+    
+    <p>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</p>
+    <input type="text" id="NumA" placeholder="nhập số a">
+    <input type="text" id="NumB" placeholder="nhập số b">
+    <input type="text" id="NumC" placeholder="nhập số c">
+    <p id="KeQ">kết quả là:</p>
+    <input type="button" onclick="NumberBigger()" value="kết quả">
+    
+    <p>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</p>
+    <input type="text" id="point1" placeholder="nhập diểm kiểm tra">
+    <input type="text" id="point2" placeholder="nhập diểm thi giữa kỹ">
+    <input type="text" id="point3" placeholder="nhập diểm thi cuối kì">
+    <p id="KetQ">là học sinh:</p>
+    <input type="button" onclick="rank()" value="kết quả">
+    
+    <p>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</p>
+    <input type="text" id="money" placeholder="? 000 000 VNĐ">
+    <p id="KetQu">Hoa hồng tháng này là:</p>
+    <input type="button" onclick="selled()" value="hoa hông nhận được">
+    
+    <p>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</p>
+    <input type="text" id="tele" placeholder="? s">
+    <p id="KetQua">Cước cuộc gọi là:</p>
+    <input type="button" onclick="telephone()" value="hoa hông nhận được">
+
+</body>
+<script>
+    
+    function test() {
+        let numa = Number(document.getElementById('a').value);
+        let numb = Number(document.getElementById('b').value);
+        console.log(numa)
+        if (numa % numb == 0) {
+            document.getElementById('kq').value = 'a chia hết cho b';
+        } else {
+            document.getElementById('kq').value = 'a không chia hết cho b';
+        }
+    }
+    
+    function result() {
+        NumAge = Number(document.getElementById('age').value)
+        if (NumAge < 15) {
+            document.getElementById('kQ').value = 'bạn chưa đủ tuổi để vào lớp 10';
+        } else {
+            document.getElementById('kQ').value = 'bạn đã đủ tuổi để vào lớp 10';
+        }
+    }
+
+    function NumberRamdom() {
+        NumberRa = Number(document.getElementById('NumRamdon').value);
+        if(NumberRa < 0) {
+            document.getElementById('KQ').innerHTML = 'kết quả là: số này nhỏ hơn không';
+        } else if (NumberRa > 0) {
+            document.getElementById('KQ').innerHTML = 'kết quả là: số này lớn hơn không';
+        } else {
+            document.getElementById('KQ').innerHTML = 'kết quả là: số này bằng không'
+        }
+    }
+
+    function NumberBigger() {
+        let a = Number(document.getElementById('NumA').value);
+        let b = Number(document.getElementById('NumB').value);
+        let c = Number(document.getElementById('NumC').value);
+        if (a > b && a > c) {
+            document.getElementById('KeQ').innerHTML = "kết quả là: a lớn nhất";
+        } else if (b > a && b > c) {
+            document.getElementById('KeQ').innerHTML = "kết quả là: b lớn nhất";
+        } else {
+            document.getElementById('KeQ').innerHTML = "kết quả là: c lớn nhất";
+        }
+    }
+    
+    function rank() {
+        let a = Number(document.getElementById('point1').value);
+        let b = Number(document.getElementById('point2').value);
+        let c = Number(document.getElementById('point3').value);
+        let tb = ((c * 3) + (b * 2) + a) / 6;
+        
+        console.log(typeof tb);
+        if (tb < 4.9) {
+            document.getElementById('KetQ').innerHTML = 'là học sinh: yếu';
+        } else if (tb >=5 && tb < 6.9) {
+            document.getElementById('KetQ').innerHTML = 'là học sinh: Trung Bình';
+        } else if (tb >= 7 && tb < 7.9) {
+            document.getElementById('KetQ').innerHTML = 'là học sinh: Khá';
+        } else if (tb >= 8 && tb < 8.9) {
+            document.getElementById('KetQ').innerHTML = 'là học sinh: Giỏi';
+        } else {
+            document.getElementById('KetQ').innerHTML = 'là học sinh: xuất sắc';
+        }
+    }
+
+    function selled() {
+        let tien = Number(document.getElementById('money').value);
+        if (tien < 500000) {
+            document.getElementById('KetQu').innerHTML = `Hoa hồng tháng này là: ${tien * 0.02}`;
+        } else if(tien >= 5000000 && tien < 10000000) {
+            document.getElementById('KetQu').innerHTML = `Hoa hồng tháng này là: ${tien * 0.05}`;
+        } else if (tien >=10000000 && tien < 15000000) {
+            document.getElementById('KetQu').innerHTML = `Hoa hồng tháng này là: ${tien * 0.08}`;
+        } else {
+            document.getElementById('KetQu').innerHTML = `Hoa hồng tháng này là: ${tien * 1.04}`;
+        }
+    }
+
+    function telephone() {
+        let tele = document.getElementById('tele').value;
+        if (tele < 30) {
+            document.getElementById('KetQua').innerHTML = `Cước cuộc gọi là: ${tele * 16.6666} VNĐ`;
+        } else if (tele >= 30 && tele < 60) {
+            document.getElementById('KetQua').innerHTML = `Cước cuộc gọi là: ${tele * 32.3332} VNĐ`;
+        } else if (tele >= 60 && tele < 90) {
+            document.getElementById('KetQua').innerHTML = `Cước cuộc gọi là: ${tele * 46.9998} VNĐ`;
+        } else {
+            document.getElementById('KetQua').innerHTML = `Cước cuộc gọi là: ${tele * 83.3333} VNĐ`;
+        }
+    }
+</script>
+</html>
