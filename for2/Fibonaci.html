@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Bài 1: In dãy Fibonaci</p>
+    <input type="text" id="fibonaci" placeholder="nhập dãy số fibonaci">
+    <input type="button" value="hiển thị" onclick="lesson1()">
+    <p id="ShowFibonaci"></p>
+
+    <p>Bài 2: Tính giai thừa của một số nguyên dương</p>
+    <input type="text" id="factorial" placeholder="nhập số nguyên dương">
+    <input type="button" value="hiển thị" onclick="lesson2()">
+    <p id="ShowFactorial">kết quả là:</p>
+
+    <p>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</p>
+
+    <p>Bài 4: In hình chữ nhật</p>
+    <input type="text" id="TienGui" placeholder="nhập số tiền gữi: VNĐ">
+    <p>lãi suất là: 7%/năm</p>
+    <input type="text" id="SoNam" placeholder="nhập số năm đã gữi:">
+    <input type="text" id="TinhLai" placeholder="Kết quả">
+    <input type="button" onclick="lesson5()" value="kiểm tra">
+
+    <p>Bài 6: In hình trái tim</p>
+
+    <h2>Lưu ý:</h2><p>chạy mã nguồn rồi gọi hàm theo từng bài sẽ hiển thị kết quả (VD: lesson1() ).</p>
+</body>
+<script>
+    function lesson1() {
+        let count;
+        count = Number(document.getElementById('fibonaci').value);
+        let n = 1;
+        let tong;
+        document.write(0 + ', ')
+        for (let i = 0, j = 1; n <= count;) {
+            tong = i + j;
+            i = j;
+            j = tong;
+            document.write(tong + ', ');
+            n++;
+        }
+    }
+    function lesson2() {
+        let count = Number(document.getElementById('factorial').value);
+        let show = 1;
+        for (let num = count; num > 0; num--) {
+            show *= num;
+            document.getElementById('ShowFactorial').innerHTML = `kết quả là: ${show}`;
+        }
+    }
+    function lesson3() {
+        //TH1:
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j < 5; j++) {
+                if (i == 4 || j == 0 || i == j || (i == 2 && j == 1) || (i == 3 && j == 2) || (i == 3 && j == 1))
+                    document.write('*');
+                else document.write(' ');
+            }
+            document.write('<br>');
+        }
+        // TH2:
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j < 5; j++) {
+                if (i == 0 || j == 0 || (i == 1 && j == 1) || (i == 2 && j == 2) || (i == 1 && j == 2)
+                    || (i == 2 && j == 1) || (i == 3 && j == 1) || (i == 1 && j == 3))
+                    document.write('*');
+                else document.write(' ');
+            }
+            document.write('<br>');
+        }
+        // TH3:
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j < 5; j++) {
+                if (i == 4 || j == 4 || (i == 3 && j == 3) || (i == 2 && j == 2) || (i == 3 && j == 2)
+                    || (i == 2 && j == 3) || (i == 3 && j == 1) || (i == 1 && j == 3))
+                    document.write('*');
+                else document.write(' ');
+            }
+            document.write('<br>');
+        }
+        // TH4:
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j < 5; j++) {
+                if (i == 0 || j == 4 || i == j || (i == 1 && j == 2) || (i == 2 && j == 3) || (i == 1 && j == 3))
+                    document.write('*');
+                else document.write(' ');
+            }
+            document.write('<br>');
+        }
+    }
+    function lesson4() {
+        for (i = 0; i < 7; i++) {
+            for (j = 0; j < 21; j++) {
+                if (i == 0 || i == 6 || j == 0 || j == 20)
+                    document.write('*');
+                else
+                    document.write('&nbsp&nbsp');
+            }
+            document.write('<br>')
+        }
+    }
+    function lesson5() {
+        let PV = Number(document.getElementById('TienGui').value);
+        let n = Number(document.getElementById('SoNam').value);
+        let FV = PV * (1 + 0.07) ** n
+        document.getElementById('TinhLai').value = FV + 'VNĐ'
+    }
+    function lesson6() {
+        let str = "<table>";
+        for (i = 0; i < 7; i++) {
+            str += "<tr>";
+            for (j = 0; j < 7; j++) {
+                if ((i == 0 && j == 1) || (i == 0 && j == 2) || (i == 0 && j == 4) || (i == 0 && j == 5) ||
+                    (i == 1 && j == 0) || (i == 1 && j == 3) || (i == 1 && j == 6) || (i == 6 && j == 3) ||
+                    (i == 2 && j == 0) || (i == 2 && j == 6) || (i == 3 && j == 0) || (i == 3 && j == 6) ||
+                    (i == 4 && j == 1) || (i == 4 && j == 5) || (i == 5 && j == 2) || (i == 5 && j == 4)) {
+                    str += "<td>";
+                    str += '*';
+                    str += "</td>";
+                }
+                else {
+                    str += "<td>";
+                    str += ' ';
+                    str += "</td>";
+                }
+            }
+            str += "</tr>";
+        }
+        str += "</table>"
+        document.write(str);
+    }
+</script>
+
+</html>

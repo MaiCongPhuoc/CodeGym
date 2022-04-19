@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Sample Screen:</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="show">
+            </td>
+            <td>
+                <input type="button" value="add" onclick="bnt_Add()">
+            </td>
+            <td>
+                <input type="button" value="display" onclick="btn_Display()">
+            </td>
+        </tr>
+    </table>
+    <div id="result"></div>
+    <hr>
+
+    <script>
+        let x = 0;
+        let array = Array();
+        function bnt_Add() {
+            array[x] = document.getElementById('show').value;
+            alert('Element: ' +array[x] + ' added at index' + x);
+            x++
+            document.getElementById('show').value = "";
+        }
+        function btn_Display() {
+            let e = '<br>';
+            for (let i = 0; i < array.length; i++){
+                e += "Element " + i + "=" + array[i] + "<br>";
+            }
+            document.getElementById("result").innerHTML = e;
+        }
+    </script>
+</body>
+
+</html>
