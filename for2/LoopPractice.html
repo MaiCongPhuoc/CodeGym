@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</p>
+    <input type="text" id="loop" placeholder="">
+    <p>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập
+        vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</p>
+    <input type="text">
+    <p>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</p>
+    <p>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</p>
+    <p>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</p>
+    <p>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</p>
+    <p>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì
+        in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</p>
+    <p>Bài 8: Game đoán số <br>
+
+        Nâng cấp game "Hãy thử đoán xem!"<br>
+
+        1. Thiết kế giao diện: Giao diện chỉ gồm 1 Button "Chơi": cho phép người dùng bắt đầu  chơi hoặc chơi lại   <br>
+
+        2. Mô tả ứng dụng: Khi người dùng nhấn vào button “Chơi”: <br>
+
+        Ứng dụng hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào <br>
+        Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà ngườI dùng chọn   <br>
+        Ứng dụng hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán   <br>
+        Ứng dụng lấy kết quả và so sánh với giá trị ngẫu nhiên. <br>
+        Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi   <br>
+        Nếu lớn hơn hoặc bé thua thì hiển thị thông báo lớn hơn hay bé thua và cho phép người dùng lựa chọn lại.</p>
+    <h3>Bài làm</h3>
+    <p id="SelectRamdon">số đã chọn là:</p>
+    <p id="NumberRamdon">số ra là:</p>
+    <h1 id="congratulation"></h1>
+    <input type="button" value="Play" onclick="Play()">
+
+</body>
+<script>
+    function lesson1() {
+        for (let i = 1; i <= 100; i++) {
+            if (i == 99) {
+                alert('đã hoàn thành!')
+            }
+            document.write(i + ', ')
+        }
+    }
+    function lesson2() {
+        let C = Number(prompt('nhập độ C hiện tại của bạn.'));
+        if (C > 100) {
+            alert('Giảm nhiệt độ.');
+        } else if (C < 20) {
+            alert('tăng nhiệt độ.')
+        } else {
+            alert('nhiệt độ vừa phải. Thở đi bạn')
+        }
+    }
+    function lesson3() {
+        let count = 19;
+        let n = 1;
+        let tong;
+        document.write('0, ')
+        for (let i = 0, j = 1; n <= count;) {
+            tong = i + j;
+            i = j;
+            j = tong;
+            document.write(tong + ', ');
+            n++;
+        }
+    }
+    function lesson4() {
+        let count = 19;
+        let n = 1;
+        let tong;
+        document.write('0, ')
+        for (let i = 0, j = 1; n <= count;) {
+            tong = i + j;
+            i = j;
+            j = tong;
+            document.write(tong + ', ');
+            if (tong % 5 == 0) {
+                break;
+            }
+            n++;
+        }
+    }
+    function lesson5() {
+        let count = 19;
+        let n = 1;
+        let show;
+        let tong = 0;
+        for (let i = 0, j = 1; n <= count;) {
+            show = i + j;
+            i = j;
+            j = show;
+            tong += show;
+            n++;
+        }
+        document.write(tong);
+    }
+    function lesson6() {
+        let count = 1;
+        let show = 0;
+        let tong = 30;
+        for (let num = 1; count <= tong; num++) {
+            if (num % 7 == 0) {
+                count++;
+                show += num;
+            }
+
+        }
+        document.write(show);
+    }
+    function lesson7() {
+        for (let i = 0; i <= 100; i++) {
+            if ((i % 3 == 0) && (i % 5 == 0)) {
+                document.write('Fizz' + ', ');
+            } else if (i % 5 == 0) {
+                document.write('Buzz' + '|| ');
+            } else if (i % 3 == 0) {
+                document.write('FizzBuzz' + '<br>');
+            }
+        }
+    }
+    function Play() {
+        for (let i = 1; i <= 3;) {
+            debugger
+            let select = Number(prompt('mời bạn nhập sô muốn đoán 0-100'));
+            let num = Math.floor(Math.random() * 100);
+            document.getElementById('SelectRamdon').innerHTML = `số đã chọn là: ${select}`;
+            document.getElementById('NumberRamdon').innerHTML = `số ra là: ${num}`;
+            if (select == num) {
+                document.getElementById('congratulation').innerHTML = 'chúc mừng bạn đã đoán đúng.';
+                break;
+            } else if (select > num) {
+                document.getElementById('congratulation').innerHTML = 'bạn đã chọn lơn hơn số đã ra.';
+                alert('bạn đã chọn lớn hơn số đã ra.')
+                i++;
+            } else {
+                document.getElementById('congratulation').innerHTML = 'bạn đã chọn bé hơn số đã ra.';
+                alert('bạn đã chọn bé hơn số đã ra.')
+                i++;
+            }
+        }
+    }
+    lesson7()
+</script>
+
+</html>

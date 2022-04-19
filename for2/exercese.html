@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let enter = 123532;
+    // let soDaoNguoc = enter;
+    // let soDu = 0;
+    // let show = 0;
+    // while (soDaoNguoc > 0) {
+    //     soDu = soDaoNguoc % 10;
+    //     soDaoNguoc = Math.floor(soDaoNguoc / 10);
+    //     show = show * 10 + soDu;
+    // }
+    // console.log(`${enter} ${show == enter ? '': 'không phải'} là số đảo ngược'`);
+    // } ----------------------------- tìm số đảo ngược
+    // let count = 20;
+    // let a = 0;
+    // let show = 0;
+    // for (let i = 1; a <= count; i++) {
+    //   if(a % i == 0) {
+    //       show += i; 
+    //       console.log(show)
+    //     }
+    //     a++
+      
+    // }
+    // --------------------------------- Tìm số chính phương
+    let count = 100;
+    let n = 5
+    for (let i = 1; n <= count; i++) {
+        if(Math.sqrt(i) == Math.floor(Math.sqrt(i))) {
+            document.write(i + ' là số chính phương.' + '<br>');
+        }
+        n++
+    }
+    </script>
+</body>
+</html>
