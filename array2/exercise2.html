@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+        <input type="text" id="search">
+        <button onclick="bnt_search()">Search</button>
+</body>
+<script>
+    const eng = ['table', 'window', 'hello', 'name', 'value', 'parameter'];
+    const vi = ['cái bàn', 'cửa sổ', 'xin chào', 'tên', 'giá trị', 'tham số'];
+    function bnt_search() {
+        let enter = document.getElementById('search').value
+        let j;
+        for (j = 0; j < eng.length; j++) {
+            if (eng[j] === enter) {
+                eng[j] = vi[j];
+                console.log(vi[j])
+                break
+            }
+        }
+        document.getElementById('search').value = vi[j]
+    }
+</script>
+
+</html>
