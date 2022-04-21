@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    let enter = Number(prompt('Nhập số lượng trong mảng'));
+    let arr = new Array(enter);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = Math.floor(Math.random() * 41 + 10)
+
+    }
+    document.write(arr + '<br>' + '<br>');
+    // let EnterValue = Number(prompt('nhập số muốn tìm kiếm'));
+    // let arrs = arr;
+    // let position = -1;
+    // for (let j in arr) {
+    //     if (arr[j] == EnterValue) {
+    //         position = j + 1;
+    //         document.write(position + '<br>');
+    //         break
+    //     }
+    // }
+    // let NewArr = new Array(enter);
+    // for (let n = 0; n < arr.length; n++) {
+    //     NewArr[n] = arr[n] * 2;
+    // }
+    // document.write(NewArr)
+
+    let start = Number(prompt('nhập vào start'));
+    arr = arr[start];
+    let end = Number(prompt('nhập vào end'));
+    arr = arr[end];
+    for (let i = start; i <= end; i++) {
+        let New = new Array();
+        New[i]
+    }
+    document.write(New)
+
+
+    document.write('<br>')
+    let plus = 0;
+    for ( let i = 0; i <arr.length; i++) {
+        plus += arr[i];
+    }
+    document.write(plus)
+</script>
+
+</html>
