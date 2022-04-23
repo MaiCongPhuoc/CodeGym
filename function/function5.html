@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập tạo và sử dụng hàm 01</title>
+</head>
+
+<body>
+    <p>
+    <h3>Bài 1:</h3> Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi "Xin chao". Gọi hàm từ trong phần 'body' của
+    trang
+    web.</p>
+    <p>
+    <h3>Bài 2:</h3> Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi
+    hàm. Gọi
+    hàm từ trong phần
+
+    'body' của trang web và hiển thị kết quả lên màn hình.
+    </p>
+    <p>
+    <h3>Bài 3:</h3> Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị
+    hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về
+    tổng của hai tham số.</p>
+    <p>
+    <h3>Bài 4:</h3> Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau để bạn có thể nhìn thấy giá
+    trị của biến result trước và sau lời gọi hàm.</p>
+
+    <script>
+        // //Bài: 1
+        // function alertMessage() {
+        //     alert('Xin Chào!!!')
+        // }
+        // alertMessage();
+
+        // //Bài: 2
+        // function increase(a) {
+        //     a++
+        //     document.write('số đã tăng lên 1: ' + a);
+        // }
+        // let a = 1;
+        // document.write('số khi khai báo: ' + a + '<br>');
+        // increase(a);
+
+        // //Bài: 3
+        // function compare(a, b) {
+        //     if (a > b) {
+        //         alert('số thứ nhất lớn hơn số thứ hai');
+        //     } 
+        //     return b + a;
+        // }
+
+        // document.write(compare(10,11))
+
+        // //Bài: 4
+        // function addNumbers() {
+        //     firstNum = 4;
+        //     secondNum = 8;
+        //     result = firstNum + secondNum;
+        //     return result;
+        //     console.log(result)
+        // }
+        // result = 0;
+        // console.log(result)
+        // result = addNumbers();
+        // console.log(result)
+
+        //Bài: 5
+        let arrStar = [
+            'Polaris',
+            'Aldebaran',
+            'Deneb',
+            'Vega',
+            'Altair',
+            'Dubhe',
+            'Regulus'
+        ];
+        let arrConstellation = [
+            'Ursa Minor',
+            'Tarurus',
+            'Cygnus',
+            'Lyra',
+            'Aquila',
+            'Ursa Major',
+            'Leo'
+        ];
+        let str = 'Vega';
+        let num = arrStar.indexOf(str)
+        num = arrConstellation.findIndex(function (index) {
+            return index
+        })
+        console.log(arrStar.indexOf('Vega'))
+        console.log(arrConstellation.findIndex(function (index) {
+            return index
+        }))
+    </script>
+</body>
+
+</html>

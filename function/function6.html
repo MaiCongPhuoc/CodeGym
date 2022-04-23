@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+    <p>Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</p>
+    <p>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</p>
+    <p>Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</p>
+    <p>Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.</p>
+    <p>Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</p>
+    <p>Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.</p>
+    <p>Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</p>
+    <p>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</p>
+    <p>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. </p>
+
+</body>
+<script>
+    // bài: 1
+    function square(a) {
+        return a * a;
+    }
+    console.log('Bài1: ' + square(3))
+    // Bài: 2
+    const PI = 3.14;
+    function area (a) {
+        return a * a * PI;
+    }
+    console.log('Bài 2: diện tích là: ' + area(3))
+    function perimeter(a) {
+        return 2 * a * PI;
+    }
+    console.log('Bài 2: chu vi là: ' + perimeter(3));
+    //Bài: 3
+    function factorial(a) {
+        let total = 1;
+        for (let i = a; i >=1;i--) {
+            total *= i;
+        }
+        return total
+    }
+    console.log('Bài 3: ' + factorial(3));
+    //Bài: 4
+    function string(a) {
+        if (a) {
+            return true;
+        }return false;
+    }
+    console.log('Bài 4: ' +string('jfsdhfjhsf'))
+    //Bài: 5
+    function min(a, b, c) {
+        if (a < b && a < c) {
+            return a;
+        } else if (b < a && b < c) {
+            return b;
+        } return c;
+    }
+    console.log('số nhỏ nhất là: ' + min(5, 4, 3));
+    //Bài: 6
+    function positiveInteger(a) {
+        if (a >=0) {
+            return true;
+        } return false
+    }
+    console.log('Bài6: ' + positiveInteger(-8));
+    //Bài: 7
+    function twoInteger(a, b) {
+        let temp = a;
+        a = b; 
+        b = temp; 
+        return `số a là : ${a} và b là ${b}`;
+    }
+    console.log('Bài 7: ' + twoInteger(1, 3));
+    //Bài: 8
+    let arr = [4, 3, 6, 7, 9, 3];
+    function arrayReverse() {
+       return arr.reverse()
+    }
+    console.log('Bài 8: ' + arrayReverse());
+    //Bài: 9
+    let arr9 = ['a', 'b', 'c', 'd', 'f', 'g', 'h', 'a']
+    var notShow = true
+    function arrString(str, index) {
+        if(str == 'a') {
+            document.write(index + '  ');
+        } 
+        document.write(-1)
+    }     
+    arr9.forEach(arrString)
+</script>
+</html>

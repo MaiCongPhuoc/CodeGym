@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nháp Array</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr1 = [4, 5, 8, 9, 4, 14];
+    let arr2 = ['House', 'Window', 'Light', 'People', 'Dog', 'cat'];
+    let text = '';
+    console.log('nguyên bản arr1 :           ' + arr1);
+    console.log('nguyên bản arr2 :           ' + arr2);
+    
+    console.log( 'kiểu dữ liệu trước của nó:  '+ typeof arr1)
+    console.log( 'kiểu dữ liệu trước của nó:  '+ typeof arr2)   
+    
+    arr1.forEach(duyet)
+    function duyet(str, index) {
+        text += `${index} : ${str} <br>`;
+    }
+    console.log(text)
+</script>
+</html>
