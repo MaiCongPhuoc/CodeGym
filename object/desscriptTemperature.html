@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let temperature = function(C) {
+        if (C >= -273) {
+            this.C = C;
+        }
+        this.getConvertToF = function() {
+            return (C * 9/5) + 32;
+        }
+        this.getConvertToK = function() {
+            return C + 273.15;
+        }
+    }
+    let temperaTure = new temperature(25)
+    document.write('<br> độ C chuyển sang độ K là: ' + temperaTure.getConvertToK());
+</script>
+</html>
