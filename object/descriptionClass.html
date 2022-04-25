@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vẽ hình chữ nhật bằng canvas</title>
+</head>
+<style></style>
+
+<body>
+    <canvas id="myRectangle" width="200" height="100" style="border:1px solid #d3d3d3;">
+        this is Rectangle</canvas>
+    <br>
+</body>
+<script>
+    let Rectangle = function (length, width) {
+        this.length = length;
+        this.width = width;
+        this.getAcreage = function () {
+            return length * width;
+        }
+        this.getPerimeter = function () {
+            return (length + width) * 2;
+        }
+        this.getRectangle = function (length, width) {
+
+            let r = document.getElementById('myRectangle');
+            let re = r.getContext('2d');
+            re.moveTo(0, 0);
+            re.lineTo(this.length, 0);
+            re.lineTo(this.length, this.width);
+            re.lineTo(0, this.width);
+            re.lineTo(0, 0);
+            re.stroke();
+        }
+    }
+    let rectang = new Rectangle(50, 50);
+    document.write('diện tích là: ' + rectang.getAcreage());
+    rectang.getRectangle();
+    document.write('<br>' + 'chu vi là: ' + rectang.getPerimeter())
+</script>
+
+</html>
