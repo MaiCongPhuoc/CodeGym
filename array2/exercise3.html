@@ -1,51 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #td{
-            border: 1px solid #333;
-            width: 40px;
-            height: 40px;
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        td {
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
         }
     </style>
 </head>
+
 <body>
-    <table>
-        <tr>
-            <td></td>
-            <td id="td">A</td>
-            <td id="td">B</td>
-            <td id="td">C</td>
-        </tr>
-        <tr>
-            <td id="td">1</td>
-            <td onclick="bnt_tick(this)" id="td"></td>
-            <td onclick="bnt_tick(this)" id="td"></td>
-            <td onclick="bnt_tick(this)" id="td"></td>
-        </tr>
-        <tr>
-            <td id="td">2</td>
-            <td onclick="bnt_tick(this)" id="td"></td>
-            <td onclick="bnt_tick(this)" id="td"></td>
-            <td onclick="bnt_tick(this)" id="td"></td>
-        </tr>
-        <tr>
-            <td id="td">3</td>
-            <td onclick="bnt_tick(this)" id="td"></td>
-            <td onclick="bnt_tick(this)" id="td"></td>
-            <td onclick="bnt_tick(this)" id="td"></td>
-        </tr>
-    </table>
+
 </body>
 <script>
-    function bnt_tick(enter) {
-        enter = 'O'
-        document.getElementById('td').innerHTML = enter;
-        return enter
+    let caro = [
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 10, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 1, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0]
+    ]
+    const player_1 = 1;
+    const player_2 = 2;
+    const x_value = 1;
+    const o_value = 10;
+    let player = player_1;
+
+    function renderCaro() {
+        let tbCaro = "<table>";
+        for (let i = 0; i < caro.length; i++) {
+            tbCaro += "<tr>";
+            for (let j = 0; j < caro[i].length; j++) {
+                tbCaro += `<td onclick="play(${i},${j})">
+                ${caro[i][j] == x_value ? 'X' :
+                        (caro[i][j] == o_value ? 'O' : '&nbsp;&nbsp;')}
+            </td>`
+            }
+            tbCaro += "</tr>";
+        }
+        tbCaro += "</table>";
+        document.body.innerHTML = tbCaro;
     }
+
+    function play(row, col) {
+        if (caro[row][col] != 0) {
+            alert("Invalid position")
+            return;
+        }
+        if (player == player_1) {
+            caro[row][col] = x_value;
+            player = player_2;
+        }
+        else {
+            caro[row][col] = o_value;
+            player = player_1;
+        }
+        renderCaro();
+    }
+    renderCaro();
 </script>
+
 </html>
