@@ -8,16 +8,14 @@ let products = [
 function renderProduct() {
     let tbProduct = document.querySelector('.table>tbody');
     let htmls = products.map(function (name, index) {
-        return `
-            <tr>
+        return `<tr>
                 <td>${index + 1}</td>
                 <td>${name}</td>
                 <td>
                     <button  class="btn" onclick="editProduct(${index})">edit</button>
                     <button  class="btn" onclick="removeProduct(${index})">remove</button>
                 </td>
-            </tr>
-            `
+            </tr>`
     })
     tbProduct.innerHTML = htmls.join('');
 }
