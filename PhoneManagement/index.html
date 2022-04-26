@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quản lí điện thoại</title>
+    <link rel="stylesheet" href="phone.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" name="productName">
+            <button class="btn" onclick="createProduct()">Create</button>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <th>STT</th>
+                    <th>tên điện thoại
+                        <span style="color: white; cursor: pointer;" title="Descending" class="entity" onclick="sortToA_z()">&#x25BC;</span>
+                        <span style="color: white; cursor: pointer;" title="Ascending" class="entity" onclick="sortToZ_a()">&#x25B2;</span>
+                    </th>
+                    <th>acction</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="row modyfy">
+            <div id="modify" class="d_none">
+                <label for="new_productName">Update Name: </label>
+                <input type="text" id="new_productName" name="productName">
+                <button class="btn" id="bntUpdate">Update</button>
+                <button class="btn" onclick="reset()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="phone.js"></script>
+
+</html>

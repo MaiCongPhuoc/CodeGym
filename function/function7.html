@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td {
+        width: 100px;
+        height: 40px;
+        border: 1px solid black;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div>
+        <form action="">
+            <input type="text" id="enter">
+            <input type="button" value="thêm" onclick="addProduct()">
+        </form>
+    </div>
+</body>
+<script>
+    let product = [
+        'Iphone',
+        'Apple',
+        'Xiao mi',
+        'SamSung'
+    ]
+    function show() {
+        return product;
+    }
+    function addProduct(add) {
+        return product.push(add);
+    }
+    // function editProduct(position, edit) {
+    //     product.find(function () {
+    //         product[position] = edit;
+    //         return product;
+    //     })
+    // }
+    function removeProduct(position) {
+        product.splice(position, 1)
+        return product;
+    }
+    console.log(show());
+
+    let table = `<div><table><tr><td>STT</td> 
+        <td>tên sản phẩm</td>
+        <td colspan="2">Chức năng</td>
+        </tr>`;
+    for (let j = 0; j < product.length; j++) {
+        table += `<tr><td>${j + 1}</td>
+                    <td>${product[j]}</td>
+                    <td><input type="button" onclick="editProduct(this)" value="Sửa"></td>
+                    <td><input type="button" onclick="removeProduct(this)" value="Xoá"></td></tr>`;
+    }
+    table += '</table></div>'
+    document.write(table)
+    function addProduct() {
+        product.push(document.getElementById('enter').value);
+        let table = `<div><table><tr><td>STT</td> 
+        <td>tên sản phẩm</td>
+        <td colspan="2">Chức năng</td>
+        </tr>`;
+        for (let j = 0; j < product.length; j++) {
+            table += `<tr><td>${j + 1}</td>
+                    <td>${product[j]}</td>
+                    <td><input type="button" onclick="editProduct(this)" value="Sửa"></td>
+                    <td><input type="button" onclick="removeProduct(this)" value="Xoá"></td></tr>`;
+        }
+        table += '</table></div>'
+        document.write(table)
+    }
+    // editProduct()
+</script>
+
+</html>

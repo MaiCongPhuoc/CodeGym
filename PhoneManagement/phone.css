@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.row{
+    margin-bottom: 3px;
+}
+.row>#productName {
+    width: 63%;
+    padding: 3px 0;
+}
+.row:first-child {
+    padding: 10px 0;
+    background-color: aquamarine;
+    margin-bottom: 5px;
+}
+.row:last-child{
+    background-color: rgb(191, 228, 158);
+}
+#modify {
+    display: none;
+    margin-top: 10px;
+}
+#modify>input{
+    width: 370px;
+    height: 25px;
+    margin: 5px 0;
+}
+#modify>button{
+    margin-top: 5px;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table, .table tr, .table td, .table th{
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 4px 0;
+}
+.table th {
+    background-color: rgb(97, 79, 79);
+    color: white;
+}
+.entity{
+    float: right;
+    margin-right: 10px;
+}
+.table td {
+    padding: 4px auto;
+}
+.table td:hover {
+    background-color: rgb(28, 35, 36) 3px 2px;
+}
+.table td:first-child{
+    text-align: center;
+}
+.table td:last-child{
+    text-align: center;
+}
+.btn{
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 30px;
+    background-image: linear-gradient(rgb(82, 55, 55, .5), rgb(165, 12, 12, .9));
+    color: wheat;
+    font-size: 14px;
+}
+.btn:hover {
+    box-shadow: rgb(165, 12, 12, .9) 1px 1px;
+    background-image: linear-gradient(rgba(75, 74, 74, 0.3), rgba(120, 58, 58, 0.9));
+}
