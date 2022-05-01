@@ -5,9 +5,9 @@ let products = [
     'Apple',
     'Nokia',
 ]
-function renderProduct() {
+function renderProduct(data) {
     let tbProduct = document.querySelector('.table>tbody');
-    let htmls = products.map(function (name, index) {
+    let htmls = data.map(function (name, index) {
         return `<tr>
                 <td>${index + 1}</td>
                 <td>${name}</td>
@@ -24,7 +24,7 @@ function createProduct() {
     if (nameProduct && nameProduct.trim() != '') {
         products.push(nameProduct)
         reset();
-        renderProduct();
+        renderProduct(products);
     } else {
         alert('you have not entered input!! ')
         document.querySelector('#productName').focus();
@@ -34,7 +34,7 @@ function createProduct() {
 
 function removeProduct(index) {
     products.splice(index, 1);
-    renderProduct()
+    renderProduct(products)
 }
 
 function editProduct(index) {
@@ -44,7 +44,7 @@ function editProduct(index) {
         let newProduct = document.querySelector('#new_productName').value;
         if (newProduct && newProduct.trim() != '') {
             products[index] = newProduct;
-            renderProduct();
+            renderProduct(products);
             reset();
             document.querySelector('#modify').classList.add('d_none')
         } else {
@@ -54,18 +54,26 @@ function editProduct(index) {
 }
 function sortToA_z() {
     products.sort()
-    renderProduct();
+    renderProduct(products);
 }
 function sortToZ_a() {
     products.sort();
     products.reverse();
-    renderProduct();
+    renderProduct(products);
+}
+function search_ketword(event) {
+    let key_word = event.target.value;
+    let result = products.filter(function(product) {
+        return product.toLowerCase().indexOf(key_word.toLowerCase()) != - 1;
+    })
+    console.log(result)
+    renderProduct(result);
 }
 function reset() {
     document.querySelector('#productName').value = '';
     document.querySelector('#modify').classList.add('d_none')
 }
 function init() {
-    renderProduct();
+    renderProduct(products);
 }
 init();

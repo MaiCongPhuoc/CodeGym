@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+    <!-- <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
     <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
@@ -18,62 +18,79 @@
     <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.</canvas>
     <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #d3d3d3;">
-        Your browser does not support the HTML5 canvas tag.</canvas>
+        Your browser does not support the HTML5 canvas tag.</canvas> -->
 </body>
 <script>
-    let person = {
-        name: ['Bob', 'Smith'],
-        age: 32,
-        gender: 'male',
-        interests: ['music', 'skiing'],
-        bio: function () {
-            alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
-        },
-        greeting: function () {
-            alert('Hi! I\'m ' + this.name[0] + '.');
+    // let person = {
+    //     name: ['Bob', 'Smith'],
+    //     age: 32,
+    //     gender: 'male',
+    //     interests: ['music', 'skiing'],
+    //     bio: function () {
+    //         alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+    //     },
+    //     greeting: function () {
+    //         alert('Hi! I\'m ' + this.name[0] + '.');
+    //     }
+    // };
+    // var c = document.getElementById("myCanvas");
+    // var ctx = c.getContext("2d");
+    // ctx.moveTo(0, 0);
+    // ctx.lineTo(200, 100);
+    // ctx.stroke();
+
+    // var c = document.getElementById("myCanvas1");
+    // var ctx = c.getContext("2d");
+    // ctx.beginPath();
+    // ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    // ctx.stroke();
+
+    // var c = document.getElementById("myCanvas2");
+    // var ctx = c.getContext("2d");
+    // ctx.font = "30px Arial";
+    // ctx.strokeText("Hello World", 10, 50);
+
+    // var c = document.getElementById("myCanvas3");
+    // var ctx = c.getContext("2d");
+
+    // // Create gradient
+    // var grd = ctx.createLinearGradient(0, 0, 200, 0);
+    // grd.addColorStop(0, "red");
+    // grd.addColorStop(1, "white");
+
+    // // Fill with gradient
+    // ctx.fillStyle = grd;
+    // ctx.fillRect(10, 10, 150, 80);
+
+
+    // var c = document.getElementById("myCanvas4");
+    // var ctx = c.getContext("2d");
+
+    // // Create gradient
+    // var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+    // grd.addColorStop(0, "red");
+    // grd.addColorStop(1, "white");
+
+    // // Fill with gradient
+    // ctx.fillStyle = grd;
+    // ctx.fillRect(10, 10, 150, 80);
+    class date {
+        constructor() {
+
         }
-    };
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    ctx.moveTo(0, 0);
-    ctx.lineTo(200, 100);
-    ctx.stroke();
-
-    var c = document.getElementById("myCanvas1");
-    var ctx = c.getContext("2d");
-    ctx.beginPath();
-    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-    ctx.stroke();
-
-    var c = document.getElementById("myCanvas2");
-    var ctx = c.getContext("2d");
-    ctx.font = "30px Arial";
-    ctx.strokeText("Hello World", 10, 50);
-
-    var c = document.getElementById("myCanvas3");
-    var ctx = c.getContext("2d");
-
-    // Create gradient
-    var grd = ctx.createLinearGradient(0, 0, 200, 0);
-    grd.addColorStop(0, "red");
-    grd.addColorStop(1, "white");
-
-    // Fill with gradient
-    ctx.fillStyle = grd;
-    ctx.fillRect(10, 10, 150, 80);
-
-
-    var c = document.getElementById("myCanvas4");
-    var ctx = c.getContext("2d");
-
-    // Create gradient
-    var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
-    grd.addColorStop(0, "red");
-    grd.addColorStop(1, "white");
-
-    // Fill with gradient
-    ctx.fillStyle = grd;
-    ctx.fillRect(10, 10, 150, 80);
+        getDay() {
+            let currentdate = new Date();
+            let datetime;
+        return datetime = `Last Sync: ${currentdate.getDay()} / ${currentdate.getMonth()} / ${currentdate.getFullYear()} @  ${currentdate.getHours()} : ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
+        }
+    }
+    let day = new date();
+    // var currentdate = new Date();
+    // var datetime = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth()
+    //     + "/" + currentdate.getFullYear() + " @ "
+    //     + currentdate.getHours() + ":"
+    //     + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+    console.log(day.getDay())
 </script>
 
 </html>

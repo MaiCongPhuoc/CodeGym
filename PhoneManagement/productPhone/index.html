@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>danh sách điện thoại</title>
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="content_firt">
+            <label for="textName">Product Name: </label>
+            <input type="text" id="textName">
+            <br>
+            <label for="textQuantity">Product Quantity: </label>
+            <input type="number" id="textQuantity" placeholder="quantity/piece">
+            <br>
+            <label for="textPrice">Product Price: </label>
+            <input type="number" id="textPrice" placeholder="000000 VND">
+            <br>
+            <button onclick="btn_Create()">Create</button>
+        </div>
+        <div class="content_secont">
+            <label for="textSearch">Search: </label>
+            <input type="text" id="textSearch" oninput="input_search(event)">
+        </div>
+        <div class="listProduct">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product Name
+                            <span style="color: white; cursor: pointer;" title="Descending" class="entity"
+                            onclick="sort('ace')">&#x25BC;</span>
+                            <span style="color: white; cursor: pointer;" title="Ascending" class="entity"
+                                onclick="sort()">&#x25B2;</span>
+                        </th>
+                        <th>Số Lượng/chiếc</th>
+                        <th>Đơn giá</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="content_third">
+            <div id="content_third-chil" class="d_none">
+                <label for="updateName">Update Name: </label>
+                <input type="text" id="updateName">
+                <br>
+                <label for="updateQuantity">Update Quantity: </label>
+                <input type="number" id="updateQuantity" placeholder="product/piece">
+                <br>
+                <label for="updatePrice">Update Price: </label>
+                <input type="number" id="updatePrice" placeholder="000000 VND">
+                <br>
+                <button id="btn_update">Update</button>
+                <button id="btn_cancel" onclick="cleanrForm()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js">
+
+</script>
+
+</html>

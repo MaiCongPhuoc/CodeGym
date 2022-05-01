@@ -1,0 +1,497 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+.main {
+    background-color: #34506d; 
+    /* margin: 40px auto; */
+    width: 100%;
+    height: 713px;
+}
+.nav {
+    width: 100%;
+    display: flex;
+    padding: 0 100px;
+}
+.nav_content_item {
+    width: 50%;
+    height: 50px;
+    /* background-color: aqua; */
+    display: flex;
+    padding: 15px 0 0 0;
+}
+.content {
+    display: flex;
+}
+/* .content_left {
+    position: relative;
+} */
+.content_show {
+    width: 50%;
+    height: 652px;
+    /* background-color: blueviolet; */
+}
+#content_left_rim {
+    position: relative;
+    left: 230px;
+    top: 10px;
+}
+.content_img {
+    position: absolute;
+    width: 380px;
+    height: 570px;
+}
+.b_img {
+    left: 12px;
+    top: 3px;
+}
+.home_phone {
+    position: relative;
+    margin: 30px 0 0 250px;
+    width: 340px;
+    height: 520px;
+}
+.header_phone {
+    height: 4%;
+    width: 98%;
+    /* margin: 0 25px; */
+    /* justify-content: space-between; */
+    display: flex;
+    padding-top: 3px;
+}
+.header_phone-left {
+    margin: 0 145px 0 25px;
+    color: aliceblue;
+}
+.header_phone-right {
+    display: inline-flex;
+    justify-content: flex-end;
+    /* margin: 0 20px; */
+    color: aliceblue;
+}
+.battery {
+    background-color: rgb(255, 0, 0);
+    height: 10px;
+    width: 25px;
+    margin: 5px 10px;
+}
+.batery_percent {
+    width: 25px;
+}
+.div_inbox {
+    height: 90%;
+    position: absolute;
+    left: 4px;
+    width: 98%;
+    background-color: rgb(255, 255, 255);
+}
+.div_inbox_header {
+    display: flex;
+    margin-top: 3px;
+    flex-wrap: wrap;
+}
+.div_inbox_header>.div_inbox_header-left {
+    margin-left: 15px;
+    margin-right: 22px;
+}
+.div_inbox_header>.div_inbox_header-right {
+    margin-right: 15px;
+}
+.div_inbox_header>.div_message-content {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(192, 192, 192);
+    box-shadow: 0px 2px 2px rgb(176, 176, 176);
+}
+.div_inbox_header>.div_message-content>div>span {
+    font-size: 14px;
+    color: rgb(131, 131, 131);
+}
+.div_inbox_content {
+    height: 86%;
+    overflow: hidden;
+}
+.div_inbox-sendmes {
+    height: 35px;
+    padding-top: 4px;
+    display: flex;
+    border-top: 1px solid rgb(199, 196, 196);
+}
+.div_inbox-sendmes>div>input {
+    width: 240px;
+    height: 100%;
+    padding: 0 3px;
+    flex-grow: 1;
+}
+/* .div_inbox-sendmes:last-child {
+    flex-grow: 1;
+} */
+.div_inbox-sendmes>div>button {
+    border: none;
+    outline: none;
+    width: 70px;
+    height: 100% ;
+    background-image: linear-gradient(rgba(219, 255, 88, 0.579), rgba(130, 188, 4, 0.933));
+    border: 2px solid rgb(180, 249, 30);
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}   
+.div_inbox-sendmes>div>button:hover {
+    background-image: linear-gradient(rgb(177, 204, 78), rgba(162, 236, 3, 0.933));
+    border: 2px solid rgb(183, 190, 168);
+}
+.div_message {
+    height: 90%;
+    position: absolute;
+    left: 4px;
+    width: 98%;
+    background-color: #fff;
+}
+.div_message>.div_message-head {
+    display: flex;
+    margin-bottom: 10px;
+}
+.div_message>.div_message-head:hover {
+    cursor: pointer;
+}
+.div_message>.div_message-head>h4 {
+    color: #333;
+    margin-top: 5px;
+    margin-left: 140px;
+}
+.div_message>.div_message-head>img {
+    width: 21px;
+    margin: 5px 0;
+}
+.div_message-content {
+    /* border: 2px solid rgb(255, 0, 0); */
+    height: 91%;
+    overflow: hidden;
+}
+.div_message-content>ul>li {
+    display: flex;
+    border-bottom: 2px solid rgb(216, 216, 216);
+    border-radius: 5px;
+}
+.div_message-content>ul>li:hover {
+    background: rgb(229, 229, 229);
+    cursor: pointer;
+}
+.div_message-content>ul>li>span {
+    margin: 0;
+    padding: 0;
+    margin: 0 5px;
+    /* background-color: rgb(235, 233, 233); */
+}
+.div_message-content>ul>li>span>img {
+    border-radius: 50%;
+    width: 55px;
+}
+.div_message-content>ul>li>div {
+    margin-right: 0px;
+}
+.div_message-box {
+    width: 100%;
+}
+.div_message-box>div {
+    display: flex;
+    margin-bottom: 4px;
+}
+.div_message-box>div>strong {
+    margin: 0;
+}
+.div_message-box>div>small {
+    margin-right: 0;
+    /* font-size: 13px; */
+}
+.div_message-content>ul>li>div>div>strong, .div_message-content>ul>li>div>div>small {
+    font-size: 13px;
+}
+.div_message-box>.content_message {
+    font-size: 14px;
+    overflow: hidden;
+    height: 30px;
+}
+
+.date {
+    /* position: absolute; */
+    height: 100px;
+    margin-top: 40px;
+    text-align: center;
+    padding: 30px 0;
+    color: aliceblue;
+}
+.app_phone {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 21%;
+    height: 21%;
+    /* background-color: #344f6dc7; */
+}
+.app>span {
+    font-size: 12px;
+    color: aliceblue;
+}
+.app>img {
+    width: 55px;
+    height: 55px;
+}
+.app>img:hover {
+    box-shadow: 0 0 10px 10px #62a1e4;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.d_none {
+    display: none;
+}
+.footer_phone {
+    height: 26px;
+    margin-top: 99px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_phone>div {
+    height: 28px;
+    width: 28px;
+}
+.footer_phone>div>img {
+    height: 20px;
+    /* margin-top: 5px; */
+    margin: 0;
+}
+.footer_phone>div>img:hover {
+    height: 23px;
+    cursor: pointer;
+}
+#content_right {
+    /* background-color: darkcyan; */
+    position: relative;
+}
+#content_right_img {
+    position: absolute;
+    left: 155px;
+    top: 8px;
+}
+
+/* Iphone*/
+.home_iphone {
+    position: relative;
+    margin: 30px 0 0 180px;
+    width: 330px;
+    height: 520px;
+}
+.header_iphone {
+    display: flex;
+    padding-top: 5px;
+    position: relative;
+}
+.header_iphone-left {
+    margin: 0 180px 0 30px;
+    color: aliceblue;
+}
+.header_iphone-right {
+    display: flex;
+    width: 80px;
+    float: right;
+}
+.batery_percent {
+    width: 25px;
+    color: #fff;
+    margin: 0px 5px 0 5px;
+}
+.battery {
+    background-color: rgb(255, 0, 0);
+    height: 10px;
+    width: 25px;
+    margin: 5px;
+}
+.app_iphone {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+.app>span {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+.app>#img {
+    width: 55px;
+    height: 55px;
+}
+.app>#img:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px #96c8fd;
+}
+.area_foooter {
+    width: 88%;
+    display: flex;
+    margin-top: 190px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+}
+.area_foooter>.app>#fimg:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 15px 5px #96c8fd;
+    background-color: rgba(155, 155, 155, 0.316);
+}
+.div_imessage {
+    background-color: #fff;
+    position: absolute;
+    top: 1px;
+    left: 6px;
+    width: 96%;
+    height: 101%;
+    border-radius: 23px;
+}
+.div_imessage>.div_imessage-head {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.div_imessage>.div_imessage-head>.showTime {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(192, 192, 192);
+    box-shadow: 0px 2px 2px rgb(176, 176, 176);
+}
+.div_imessage>.div_imessage-head>.showTime>span {
+    font-size: 14px;
+    color: rgb(131, 131, 131);
+}
+.div_imessage-content {
+    height: 73%;
+    border-bottom: 1px solid rgb(192, 192, 192);
+}
+.send_imes {
+    display: flex;
+    padding: 5px 0;
+}
+.content_imes>input {
+    width: 230px;
+    height: 25px;
+    padding: 0 3px;
+    flex-grow: 1;
+}
+.send>button {
+    border: none;
+    outline: none;
+    width: 70px;
+    height: 100% ;
+    background-image: linear-gradient(rgba(255, 233, 88, 0.579), rgba(255, 188, 54, 0.933));
+    border: 2px solid rgb(208, 255, 115);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.send>button:hover {
+    background-image: linear-gradient(rgb(255, 250, 105), rgba(247, 253, 73, 0.933));
+    border: 2px solid rgb(183, 190, 168);
+}
+.footer_inbox {
+    height: 10px;
+}
+.footer_inbox>div {
+    width: 120px;
+    background-color: #333;
+    height: 100%;
+    border-radius: 10px 10px;
+    margin: 0 auto;
+}
+.footer_inbox>div:hover {
+    cursor: pointer;
+}
+.div_iibox {
+    background-color: #fff;
+    position: absolute;
+    top: 1px;
+    left: 6px;
+    width: 96%;
+    height: 101%;
+    border-radius: 23px;
+}
+.div_iibox>.div_iibox-head {
+    display: flex;
+    margin-top: 20px;
+}
+.div_iibox>.div_iibox-head>img {
+    width: 21px;
+    margin: 0 5px;
+}
+.div_iibox>.div_iibox-head>img:hover {
+    cursor: pointer;
+}
+.div_iibox>.div_iibox-head>label {
+    margin-right: 0px;
+}
+.div_iibox>.div_iibox-head>h4 {
+    color: #333;
+    margin-top: 5px;
+    margin-right: 105px;
+}
+.div_iibox-content {
+    height: 89%;
+}
+.div_iibox-content>ul>li {
+    overflow: hidden;
+    border-bottom: 2px solid rgb(226, 226, 226);
+    border-radius: 5px;
+    padding: 4px;
+    height: 60px;
+}
+.div_iibox-content>ul>li:hover {
+    background-color: rgb(222, 222, 222);
+    cursor: pointer;
+}
+.div_iibox-box {
+    display: flex;
+}
+.div_iibox-box>div:first-child {
+    margin-left: 5px;
+}
+.div_iibox-box>div>div>small {
+    font-size: 14px;
+    color: rgb(195, 195, 195);
+}
+.div_iibox-box>div>.content_message {
+    overflow: hidden;
+}
+.div_iibox-box>strong {
+    margin: 0 0 0 10px;
+}
+.div_iibox-box>span {
+    margin: 0 0 0 5px;
+}
+.div_iibox-box>span>img {
+    border-radius: 50%;
+}
+.footer_mes {
+    height: 10px;
+}
+.footer_mes>div {
+    width: 120px;
+    background-color: #333;
+    height: 100%;
+    border-radius: 10px 10px;
+    margin: 0 auto;
+}
+.footer_mes>div:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App mobile</title>
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="checkbox.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div id="nav" class="nav_content_item">
+                <div class="nav_left">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <b>POWER</b>
+                </div>
+                <div class="nav_right">
+                    <b>CHARGE</b>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div id="nav_right" class="nav_content_item">
+                <div class="nav_left_right">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <b>POWER</b>
+                </div>
+                <div class="nav_right_right">
+                    <b>CHARGE</b>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div id="content_left" class="content_show">
+                <div id="content_left_rim">
+                    <img src="./img/nokia-base-change.png" alt="ảnh nền NOKIA" class="content_img img b_img" id=""
+                        style="width: 355px; height: 508px">
+                    <img src="./img/nokia4x6-border.png" alt="viền điện thoại NOKIA" class="content_img" id="">
+                </div>
+                <div class="home_phone">
+                    <div class="header_phone">
+                        <div class="header_phone-left">
+                            <span></span>
+                        </div>
+                        <div class="header_phone-right">
+                            <div class="battery"></div>
+                            <div class="batery_percent"><span style="font-size: 15px;">0%</span></div>
+                        </div>
+                    </div>
+                    <div class="warring"></div>
+                    <div class="div_inbox d_none">
+                        <div class="div_inbox_header">
+                            <div class="div_inbox_header-left">
+                                <h4>Message</h4>
+                            </div>
+                            <div>
+                                <h3>Iphone</h3>
+                            </div>
+                            <div class="div_inbox_header-right">
+                                <b>...</b>
+                            </div>
+                            <div class="div_message-content">
+                                <div>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div_inbox_content">
+                            <ul>
+
+                            </ul>
+                        </div>
+                        <div class="div_inbox-sendmes">
+                            <div class="div_inbox-sendmes-content">
+                                <input type="text" id="enterMes">
+                            </div>
+                            <div>
+                                <button id="sendMes" onclick="send()">send</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div_message d_none">
+                        <div class="div_message-head">
+                            <h4>Inbox</h4>
+                            <img src="./img/compose.png" alt="" onclick="inbox()">
+                        </div>
+                        <div class="div_message-content">
+                            <ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="date"></div>
+                    <div class="app_phone">
+                        <div class="app">
+                            <img src="./img/call.png" alt="">
+                            <span>Call</span>
+                        </div>
+                        <div class="app">
+                            <img src="./img/youtube.png" alt="">
+                            <span>Youtube</span>
+                        </div>
+                        <div class="app">
+                            <img src="./img/google-map.png" alt="">
+                            <span>Maps</span>
+                        </div>
+                        <div class="app">
+                            <img src="./img/Photos.png" alt="">
+                            <span>Photos</span>
+                        </div>
+                        <div class="app">
+                            <img src="./img/Instagram.png" alt="">
+                            <span>Instagram</span>
+                        </div>
+                        <div class="app">
+                            <img src="./img/message.png" alt="" onclick="inbox()">
+                            <span>Message</span>
+                        </div>
+                        <div class="app">
+                            <img src="./img/play-store.png" alt="">
+                            <span>Play Store</span>
+                        </div>
+                        <div class="app">
+                            <img src="./img/gmail.png" alt="">
+                            <span>Gmail</span>
+                        </div>
+                        <div class="app">
+                            <img src="./img/inbox.png" alt="" onclick="message()">
+                            <span>Inbox</span>
+                        </div>
+                        <div class="app">
+                            <img src="./img/Settings.png" alt="">
+                            <span>Settings</span>
+                        </div>
+                    </div>
+                    <div class="footer_phone">
+                        <div><img src="./img/back.png" alt=""></div>
+                        <div><img src="./img/nokia-home.png" alt="" onclick="reset()"></div>
+                        <div><img src="./img/multitasking.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Iphone -->
+            <div id="content_right" class="content_show">
+                <div id="content_right_img">
+                    <img src="./img/iphone4x6.png" alt="ảnh điện thoại iphone" class="content_img">
+                </div>
+                <div class="home_iphone">
+                    <div class="header_iphone">
+                        <div class="header_iphone-left">
+                            <span></span>
+                        </div>
+                        <div class="header_iphone-right">
+                            <div class="battery"></div>
+                            <div class="batery_percent"><span style="font-size: 15px;">0%</span></div>
+                        </div>
+                    </div>
+                    <div class="div_imessage d_none">
+                        <div class="div_imessage-head">
+                            <h4></h4>
+                            <h4>Messages</h4>
+                            <h4>...</h4>
+                            <div class="showTime">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="div_imessage-content">
+                            
+                        </div>
+                        <div class="send_imes">
+                            <div class="content_imes">
+                                <input type="text" id="div_imessage">
+                            </div>
+                            <div class="send">
+                                <button onclick="send2()">Send</button>
+                            </div>
+                        </div>
+                        <div class="footer_inbox">
+                            <div onclick="ireset()"></div>
+                        </div>
+                    </div>
+                    <div class="div_iibox d_none">
+                        <div class="div_iibox-head">
+                            <label for=""></label>
+                            <h4>Inbox</h4>
+                            <img src="./img/compose.png" alt="" onclick="imessage()">
+                        </div>
+                        <div class="div_iibox-content">
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                        <div class="footer_mes">
+                            <div onclick="ireset()"></div>
+                        </div>
+                    </div>
+                    <div class="app_iphone">
+                        <div class="app">
+                            <img id="img" src="./img/call.png" alt="">
+                            <span>Call</span>
+                        </div>
+                        <div class="app">
+                            <img id="img" src="./img/Mail.png" alt="">
+                            <span>Mail</span>
+                        </div>
+                        <div class="app">
+                            <img id="img" src="./img/Maps.png" alt="">
+                            <span>Maps</span>
+                        </div>
+                        <div class="app">
+                            <img id="img" src="./img/Photos.png" alt="">
+                            <span>Photos</span>
+                        </div>
+                        <div class="app">
+                            <img id="img" src="./img/inbox.png" alt="" onclick="iibox()">
+                            <span>inbox</span>
+                        </div>
+                        <div class="app">
+                            <img id="img" src="./img/facebook.png" alt="">
+                            <span>facebook</span>
+                        </div>
+                        <div class="app">
+                            <img id="img" src="./img/ios.png" alt="">
+                            <span>App store</span>
+                        </div>
+                        <div class="app">
+                            <img id="img" src="./img/Settings.png" alt="">
+                            <span>Settings</span>
+                        </div>
+                    </div>
+                    <div class="area_foooter">
+                        <div class="app">
+                            <img id="fimg" src="./img/call.png" alt="">
+                        </div>
+                        <div class="app">
+                            <img id="fimg" src="./img/safari.png" alt="">
+                        </div>
+                        <div class="app">
+                            <img id="fimg" src="./img/message.png" alt="" onclick="imessage()">
+                        </div>
+                        <div class="app">
+                            <img id="fimg" src="./img/music.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="mobile.js">
+
+</script>
+
+</html>

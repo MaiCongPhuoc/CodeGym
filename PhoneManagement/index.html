@@ -17,12 +17,20 @@
             <button class="btn" onclick="createProduct()">Create</button>
         </div>
         <div class="row">
+            <div id="search_content">
+                <label for="Search">Search:</label>
+                <input type="search" class="form-control" id="Search" oninput="search_ketword(event)">
+            </div>
+        </div>
+        <div class="row">
             <table class="table">
                 <thead>
                     <th>STT</th>
                     <th>tên điện thoại
-                        <span style="color: white; cursor: pointer;" title="Descending" class="entity" onclick="sortToA_z()">&#x25BC;</span>
-                        <span style="color: white; cursor: pointer;" title="Ascending" class="entity" onclick="sortToZ_a()">&#x25B2;</span>
+                        <span style="color: white; cursor: pointer;" title="Descending" class="entity"
+                            onclick="sortToA_z()">&#x25BC;</span>
+                        <span style="color: white; cursor: pointer;" title="Ascending" class="entity"
+                            onclick="sortToZ_a()">&#x25B2;</span>
                     </th>
                     <th>acction</th>
                 </thead>

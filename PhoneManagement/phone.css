@@ -23,10 +23,23 @@
 .row:last-child{
     background-color: rgb(191, 228, 158);
 }
-#modify {
+.d_none {
     display: none;
     margin-top: 10px;
 }
+#search_content{
+    background-color: rgb(93, 124, 151);
+    padding: 5px 0;
+}
+#search_content{
+    background-color: rgb(93, 124, 151);
+    padding: 5px 4px;
+    color: white;
+}
+#search_content > input{
+    width: 86%;
+}
+
 #modify>input{
     width: 370px;
     height: 25px;
