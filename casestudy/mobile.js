@@ -18,6 +18,7 @@ class Message {
         return hours = `${showDate.getHours()}:${showDate.getMinutes()}:${showDate.getSeconds()}`
     }
 }
+let powerPhone = -1;
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let arrMessage = [];
@@ -49,7 +50,24 @@ function showHours() {
     timeMessage.innerHTML = `${days[showDate.getDay()]}, ${months[showDate.getMonth()]} ${showDate.getDate()}, ${showDate.getFullYear()}`
     let timeiMessage = document.querySelector('.div_imessage-head>div>span');
     timeiMessage.innerHTML = `${days[showDate.getDay()]}, ${months[showDate.getMonth()]} ${showDate.getDate()}, ${showDate.getFullYear()}`
-
+}
+function power(p) {
+    powerPhone *= p;
+    if(powerPhone > 0) {
+        document.querySelector('.home_phone>.power').classList.add('d_none');
+    } else {
+        document.querySelector('.home_phone>.power').classList.remove('d_none');
+    }
+    return powerPhone
+}
+function ipower(p) {
+    powerPhone *= p;
+    if(powerPhone > 0) {
+        document.querySelector('.home_iphone>.power').classList.add('d_none');
+    } else {
+        document.querySelector('.home_iphone>.power').classList.remove('d_none');
+    }
+    return powerPhone
 }
 function renderMessage1() {
     let ulMessage = document.querySelector('.div_message-content>ul');
@@ -128,9 +146,7 @@ function send2() {
     document.querySelector('#div_imessage').value = '';
     document.querySelector('.div_imessage').classList.add('d_none');
 }
-function showContentMessage() {
 
-}
 function message() {
     document.querySelector('.div_message').classList.remove('d_none');
     document.querySelector('.div_inbox').classList.add('d_none');

@@ -22,7 +22,6 @@
     }
   
   }
-  
   var hero = new Hero('pikachu.png', 20, 30, 200);
   
   function start(){

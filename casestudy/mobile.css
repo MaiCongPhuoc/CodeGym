@@ -54,6 +54,13 @@
     width: 340px;
     height: 520px;
 }
+.power {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.362);
+    border-radius: 30px;
+}
 .header_phone {
     height: 4%;
     width: 98%;
@@ -69,7 +76,7 @@
 .header_phone-right {
     display: inline-flex;
     justify-content: flex-end;
-    /* margin: 0 20px; */
+    margin-right: 17px;
     color: aliceblue;
 }
 .battery {
@@ -296,7 +303,7 @@
 .header_iphone {
     display: flex;
     padding-top: 5px;
-    position: relative;
+    /* position: relative; */
 }
 .header_iphone-left {
     margin: 0 180px 0 30px;
